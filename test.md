@@ -44,7 +44,7 @@ Spørsmålet er selvfølgelig: trenger vi kompleksisteten i ISO 25964 og SKOS-XL
 
 Det kan også være interessant å ta en titt på MADS
 
-![SKOS](mads.svg)
+![SKOS](https://cdn.rawgit.com/danmichaelo/test/master/mads.svg)
 
 Merk at MADS er "not intended to be a crosswalk that allows for bi-directional conversions without some loss of data". http://www.loc.gov/standards/mads/mads-mapping.html#mapping
 
