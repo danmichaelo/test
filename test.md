@@ -20,7 +20,7 @@ Men djevelen ligger som vanlig i detaljene. Det gikk et lys opp for meg da Grete
 
 La oss tegne det slik:
 
-![ISO 2788](https://cdn.rawgit.com/danmichaelo/test/master/iso2788.svg)
+![ISO 2788](https://cdn.rawgit.com/danmichaelo/test/88e6882ff0266f06c47a1993b064d601dadbb337/iso2788.svg)
 
 Hvordan ser dette ut som SKOS?
 
