@@ -24,16 +24,16 @@ La oss tegne det slik:
 
 Hvordan ser dette ut som SKOS?
 
-![SKOS](https://cdn.rawgit.com/danmichaelo/test/master/skos.svg)
+![SKOS](https://cdn.rawgit.com/danmichaelo/test/88e6882ff0266f06c47a1993b064d601dadbb337/skos.svg)
 
 Siden altLabel er literaler, ikke klasser, har vi rett og slett ingen mulighet til å legge på definisjonen "Kinesisk kortnovelle". Bam! Man begynner å forstå hvorfor noen tok seg bryet med å lage SKOS-XL:
 
 
-![SKOS-XL](https://cdn.rawgit.com/danmichaelo/test/master/skosxl.svg)
+![SKOS-XL](https://cdn.rawgit.com/danmichaelo/test/88e6882ff0266f06c47a1993b064d601dadbb337/skosxl.svg)
 
 som ligger nærmere en viss standard:
 
-![ISO 25964](https://cdn.rawgit.com/danmichaelo/test/master/iso25964.svg)
+![ISO 25964](https://cdn.rawgit.com/danmichaelo/test/88e6882ff0266f06c47a1993b064d601dadbb337/iso25964.svg)
 
 Her ser vi godt at ISO 25964 er mye mer komplisert enn ISO 2788.
 Selv om ISO 25964, som SKOS, er begrepssentrert, tar den også opp i seg at termer er entiteter som selv kan ha noter og definisjoner.
@@ -44,13 +44,13 @@ Spørsmålet er selvfølgelig: trenger vi kompleksisteten i ISO 25964 og SKOS-XL
 
 Det kan også være interessant å ta en titt på MADS
 
-![SKOS](https://cdn.rawgit.com/danmichaelo/test/master/mads.svg)
+![SKOS](https://cdn.rawgit.com/danmichaelo/test/88e6882ff0266f06c47a1993b064d601dadbb337/mads.svg)
 
 Merk at MADS er "not intended to be a crosswalk that allows for bi-directional conversions without some loss of data". http://www.loc.gov/standards/mads/mads-mapping.html#mapping
 
 I MARC21 er det ulike måter å uttrykke se-henvisninger. Med *simple cross references* uttrykkes strengene direkte i tracing fields som "unauthorized headings" – uten noen egen MARC-post! Med *complex cross references* har referansene egen MARC-post. En post med 008/09 b [untraced reference record] nærmer seg antakelig det vi har i Humord.
 
-![SKOS](gnd.svg)
+![SKOS](https://cdn.rawgit.com/danmichaelo/test/88e6882ff0266f06c47a1993b064d601dadbb337/gnd.svg)
 
 
 
