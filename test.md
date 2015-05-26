@@ -41,7 +41,8 @@ Spørsmålet er: trenger vi kompleksisteten i ISO 25964 og SKOS-XL, eller klarer
 
 ## MADS og GND
 
-Det kan også være interessant å ta en titt på hvordan vi kunne uttrykt dette Humordet i RDF-modellene som brukes av LC og DNB. Først LC:
+Det kan også være interessant å ta en titt på hvordan vi kunne uttrykt dette Humordet i RDF-modellene som brukes av LC og DNB. 
+### MADS
 
 <img src="mads.png" alt="MADS" width="600">
 
@@ -51,7 +52,7 @@ Merk også at selv om MADS ligger nær MARC21 Authority, er det ikke mulig å ko
 
 I MARC21 er det ulike måter å uttrykke se-henvisninger. Med *simple cross references* uttrykkes strengene direkte i tracing fields som "unauthorized headings" – uten noen egen MARC-post! Med *complex cross references* har referansene egen MARC-post. En post med 008/09 b [untraced reference record] nærmer seg antakelig det vi har i Humord.
 
-## GND
+### GND
 
 <img src="gnd.png" alt="GND" width="600">
 
