@@ -1,8 +1,12 @@
+(OBS! Skissene kan inneholde feil! Navnerom er utelatt for forenklingens skyld)
 
-Det som ikke gikk opp for meg da var at det faktisk er et markant skille mellom datamodellen i Realfagstermer og Humord. Mens Realfagstermer er begrepsbasert og ligger nærmere SKOS og ISO 25694, er Humord termbasert og ligger nærmere ISO 2788. Grunnen til at jeg ikke la merke til det er at de to modellene i stor grad er kompatible. Det er lett å forestille seg hvordan to termer relatert gjennom en "SE"-relasjon er uttrykk for det samme underliggende begrepet, selv om begreper ikke er eksplisitt uttrykt i ISO 2788 (OK, jeg må innrømme at jeg ikke har lest ISO 2788).
+Noe som sent gikk opp for meg var at det faktisk er et markant skille mellom datamodellen i Realfagstermer og Humord.
+- Realfagstermer bygger på en begrepsbasert modell som er kompatibel med både SKOS og ISO 25694.
+- Humord bygger på en termbasert modell som er kompatibel med ISO 2788. Den kan enkelt konverteres til ISO 25694, men ikke til SKOS.
 
-Men djevelen ligger som vanlig i detaljene. Det gikk et lys opp for meg da Grete skrev om note-felter på se-henvisninger. Disse er så sjeldne i Humord at jeg hadde oversett dem, men de finnes altså;
+I mange tilfeller er ikke skillet av betydning. Det er lett å forestille seg hvordan to termer relatert gjennom en "SE"-relasjon er uttrykk for det samme underliggende begrepet, selv om begreper ikke er eksplisitt uttrykt i ISO 2788 (OK, jeg må innrømme at jeg ikke har lest ISO 2788).
 
+Men djevelen ligger som vanlig i detaljene. Først var det de generelle se-henvisningene, som bryter fundamentalt med SKOS-modellen. Men så var det en ting til, som jeg ikke har vært klart over før nå: note-felter på se-henvisninger. Disse er så sjeldne i Humord at jeg hadde oversett dem, men de finnes altså;
 
 	HUME06723
 	TE Noveller
@@ -15,27 +19,25 @@ Men djevelen ligger som vanlig i detaljene. Det gikk et lys opp for meg da Grete
 	HUME07490
 	TE Novellister
 
-
-La oss tegne det slik:
+Dette er umulig å uttrykke i SKOS, men det er mulig i SKOS-XL og ISO 25694. La oss begynne med å se på hvordan vi kan tegne begrepet `HUME06723 "Noveller"` etter ISO 2788-modellen:
 
 <img src="iso2788.png" alt="ISO 2788" width="600">
 
-Hvordan ser dette ut som SKOS?
-
-<img src="skos.png" alt="SKOS" width="600">
-
-Siden altLabel er literaler, ikke klasser, har vi rett og slett ingen mulighet til å legge på definisjonen "Kinesisk kortnovelle". Bam! Man begynner å forstå hvorfor noen tok seg bryet med å lage SKOS-XL:
-
-<img src="skosxl.png" alt="SKOS-XL" width="600">
-
-som ligger nærmere en viss standard:
+Vi ser at begreper ikke er eksplisitt uttrykt, så vi må resonnere oss frem til at det finnes et underliggende begrep. La oss hoppe til ISO 25694:
 
 <img src="iso25964.png" alt="ISO 25964" width="600">
 
-Her ser vi godt at ISO 25964 er mye mer komplisert enn ISO 2788.
-Selv om ISO 25964, som SKOS, er begrepssentrert, tar den også opp i seg at termer er entiteter som selv kan ha noter og definisjoner.
+Her ser vi hvordan begreper er eksplisitt uttrykt, og vi ser at ISO 25964 er en mer komplisert modell enn ISO 2788. SKOS er, som ISO 25694, begrepsbasert, men også enklere. I SKOS er ikke termene egne entiteter som selv kan ha noter og definisjoner.
 
-Spørsmålet er selvfølgelig: trenger vi kompleksisteten i ISO 25964 og SKOS-XL, eller klarer vi oss med SKOS? Er "Duanpian xiaoshuo" egentlig en term, eller et begrep i seg selv? Hvorfor kan vi ikke angi at noe er et begrep, men at det ikke skal brukes i indeksering?
+<img src="skos.png" alt="SKOS" width="600">
+
+Siden altLabel er literaler, ikke klasser, har vi rett og slett ingen mulighet til å legge på definisjonen "Kinesisk kortnovelle". Bam! Så var det noen som laget SKOS-XL:
+
+<img src="skosxl.png" alt="SKOS-XL" width="600">
+
+som vi ser ligger nærmere ISO 25694 i dette tilfellet (det er en del andre komplikasjoner i ISO 25694 som SKOS-XL ikke tar høyde for).
+
+Spørsmålet er: trenger vi kompleksisteten i ISO 25964 og SKOS-XL, eller klarer vi oss med SKOS? Er "Duanpian xiaoshuo" egentlig en term, eller et begrep i seg selv? Ville det være riktigere å modellere det som et begrep som ikke brukes i indeksering..?
 
 ## MADS
 
@@ -43,12 +45,13 @@ Det kan også være interessant å ta en titt på MADS
 
 <img src="mads.png" alt="MADS" width="600">
 
-Merk at MADS er "not intended to be a crosswalk that allows for bi-directional conversions without some loss of data". http://www.loc.gov/standards/mads/mads-mapping.html#mapping
+MADS ligger selvfølgelig nær MARC21, men er "not intended to be a crosswalk that allows for bi-directional conversions without some loss of data". http://www.loc.gov/standards/mads/mads-mapping.html#mapping
 
 I MARC21 er det ulike måter å uttrykke se-henvisninger. Med *simple cross references* uttrykkes strengene direkte i tracing fields som "unauthorized headings" – uten noen egen MARC-post! Med *complex cross references* har referansene egen MARC-post. En post med 008/09 b [untraced reference record] nærmer seg antakelig det vi har i Humord.
 
+## GND
+
+Og GND:
+
 <img src="gnd.png" alt="GND" width="600">
 
-
-
-Datamodellen i Realfagstermer ligger svært nær SKOS, og nærmere ISO 25694 enn ISO 2788, mens Humord følger ISO 2788. 
